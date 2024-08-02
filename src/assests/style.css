@@ -1,0 +1,150 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+.ulCnt{
+  box-sizing:border-box;
+}
+.ulCnt li button{
+  list-style:none;
+  height:90px;
+
+}
+
+
+.result li[data-correct="true"]{
+  color:green;
+}
+.result li[data-correct="false"]{
+  color:#e70d0d;
+}
+
+.name {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.name {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #7000fa;
+  --fs-size: 1em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+.name:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.container {
+  width:100vw;
+  margin:auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+.container .glass {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(#fff2, #eac7fe);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin:0px 10px 22px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 00.2deg));
+}
+
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 15px 21px;
+
+}
+
+.container .glass::after{
+  content: attr(data-text);
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #120c0c;
+  
+}
+
+.glass button {
+ display: inline-block;
+ border-radius: 8px;
+ background-color: #a04bfb;
+ border: none;
+ color: #ffffff;
+ text-align: center;
+ font-size: 18px;
+ padding: 8px;
+ width: 120px;
+ transition: all 0.5s;
+ cursor: pointer;
+ margin: 5px;
+}
+
+.glass button span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+   
+}
+
+.glass button span:after {
+ content: '»';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -15px;
+ transition: 0.5s;
+
+}
+
+.glass button:hover span {
+ padding-right: 15px;
+}
+
+.glass button:hover span:after {
+ opacity: 1;
+ right: 0;
+}
+
