@@ -20,7 +20,7 @@ const Footer = () => {
           ©2024 <b> <small>QuizApp</small> / Msumair</b>
           <a
              href="https://github.com/Muhammad-Sumair-Ali"
-            className="text-gray-300 text-gray-800 ml-1"
+            className="text-gray-500 text-gray-800 ml-1"
             rel="noopener noreferrer"
             target="_blank"
           >

@@ -24,7 +24,7 @@ export default function App() {
       correctAnswers.push(userCorrect);
     // console.log(userCorrect);
   };
-  // console.log(CorrectAnswers, "saved  array");
+
 
   const resetQuiz = () => {
     setCurrentQuestion(0);
@@ -34,6 +34,7 @@ export default function App() {
   };
 
   const exitQuiz = () => {
+    setUserAnswers([]);
     setCurrentQuestion(0);
     setStartQuiz(null);
     setTitle(null);
@@ -80,7 +81,7 @@ export default function App() {
             style={{ "--r": -25 }}
             className="glass w-40 md:w-48 flex flex-col"
           >
-            <FaHtml5 size={55} className="m-0 fill-fuchsia-700" />
+            <FaHtml5 size={55} className="m-0 fill-red-700" />
             <button>
               <span
                 onClick={() => {
@@ -97,7 +98,7 @@ export default function App() {
             style={{ "--r": -25 }}
             className="glass w-40 md:w-48 flex flex-col"
           >
-            <FaCss3Alt size={55} className="m-0 fill-cyan-600" />
+            <FaCss3Alt size={55} className="m-0 fill-cyan-700" />
             <button>
               <span
                 onClick={() => {
@@ -114,7 +115,7 @@ export default function App() {
             style={{ "--r": -25 }}
             className="glass w-40 md:w-48 flex flex-col"
           >
-            <IoLogoJavascript size={55} className="m-0 fill-yellow-600" />
+            <IoLogoJavascript size={55} className="m-0 fill-yellow-500" />
             <button>
               <span
                 onClick={() => {
