@@ -4,7 +4,7 @@ import Question from "./components/Question";
 import Result from "./components/Result";
 import "./index.css";
 import "./assests/style.css";
-import Hero from "./assests/bg.svg";
+import Hero from "./bg.svg";
 import Navbar from "./components/common/Navbar.jsx";
 import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -60,7 +60,7 @@ export default function App() {
     <>
       <div
         style={{
-          backgroundImage: `url(${Hero})`,
+          backgroundImage: `url(${Hero && Hero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "100vh",
