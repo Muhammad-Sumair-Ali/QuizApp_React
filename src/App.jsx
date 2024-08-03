@@ -59,8 +59,9 @@ export default function App() {
   return (
     <>
       <div
+        className="bg-white"
         style={{
-          backgroundImage: `url(${Hero && Hero})`,
+          backgroundImage: `url(${Hero && "https://cdn.sanity.io/images/1ux2e04i/production/3eacd619e547160c07ebaee2f9fbaadcdb05661f-1440x1060.svg" })`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "100vh",
